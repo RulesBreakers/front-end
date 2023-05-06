@@ -21,26 +21,10 @@ import {
   sidebar,
 } from './style.ts';
 import { IAMessage, UserMessage } from './Message.tsx';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import { BACK_URL } from '../../base.ts';
+import { useState } from 'react';
 
 const Chatterbox = () => {
-
-  const [message , setMessage] = useState<string[]>();
-  const [requests , setRequests] = useState("");
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const response = await axios.get(BACK_URL);
-        setMessage(response.data);
-
-      } catch (error) {
-        console.error(error);
-      }
-    })();
-  }, [BACK_URL]);
+  const [message, setMessage] = useState<string[]>();
 
   return (
     <Box sx={container}>
@@ -70,9 +54,10 @@ const Chatterbox = () => {
       <Box sx={innerContainer}>
         <Box sx={messageContainer}>
           <UserMessage
-            avatarUrl='https://www.pinterest.com/yumiisaiko/' 
-            content={""}          />
-          <IAMessage content={message?.at(0)} />
+            avatarUrl='https://www.pinterest.com/yumiisaiko/'
+            content={''}
+          />
+          {/* <IAMessage content={message?.at(0)} /> */}
         </Box>
         <Stack sx={messageBox} justifyContent='center'>
           <TextField

@@ -50,9 +50,7 @@ export const messageField: SxProps = {
   borderRadius: 'var(--border-radius)',
 };
 
-export const avatar: SxProps = {
-  // border: '2px solid #050517',
-};
+export const avatar: SxProps = {};
 
 export const messageItem: SxProps = {
   bgcolor: '#221E22',
