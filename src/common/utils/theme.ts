@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material';
-import { blue as primary, blue as secondary } from '@mui/material/colors';
+import { blue as primary } from '@mui/material/colors';
 const important = (value: string) => `${value} !important`;
 
 export const theme = createTheme({
@@ -12,12 +12,14 @@ export const theme = createTheme({
           fontSize: '16px',
           borderRadius: '10px',
           background: primary[400],
-          boxShadow: `0px 0px 40px 10px ${primary[200]}20`,
+          boxShadow: `0px 0px 40px 10px ${primary[200]}10`,
           color: '#fff',
           textTransform: 'capitalize',
           outline: important('none'),
+          border: important('none'),
           ':hover': {
             background: primary[600],
+            color: '#FFF',
           },
         },
       },
@@ -25,14 +27,14 @@ export const theme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          background: `rgba(234, 237, 237, 0.1)`,
-          borderRadius: '16px',
-          boxShadow: `0 4px 30px ${secondary[200]}50`,
-          backdropFilter: 'blur(10px)',
-          border: `1px solid ${secondary[200]}50`,
+          background: `${primary[100]}70`,
+          borderRadius: '10px',
           margin: 5,
-          color: '#fff',
-          minWidth: 300,
+          color: '#000',
+          backdropFilter: 'blur(5px)',
+          border: important('none'),
+          outline: important('none'),
+          boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.37 )',
         },
       },
     },

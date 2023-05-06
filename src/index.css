@@ -81,6 +81,7 @@ body {
   overflow: hidden;
 }
 
+
 @keyframes rotation10 {
   0% {
     transform: rotate(0);
@@ -89,4 +90,11 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
 }
