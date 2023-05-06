@@ -21,8 +21,27 @@ import {
   sidebar,
 } from './style.ts';
 import { IAMessage, UserMessage } from './Message.tsx';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { BACK_URL } from '../../base.ts';
 
 const Chatterbox = () => {
+
+  const [message , setMessage] = useState<string[]>();
+  const [requests , setRequests] = useState("");
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await axios.get(BACK_URL);
+        setMessage(response.data);
+
+      } catch (error) {
+        console.error(error);
+      }
+    })();
+  }, [BACK_URL]);
+
   return (
     <Box sx={container}>
       <Drawer open variant='permanent' sx={sidebar}>
@@ -51,14 +70,9 @@ const Chatterbox = () => {
       <Box sx={innerContainer}>
         <Box sx={messageContainer}>
           <UserMessage
-            content='User message one here another mesage any message any mesage any message any message any message any message any message any message any message any message User message one here another mesage any message any mesage any message any message any message any message any message any message any message any messageUser message one here another mesage any message any mesage any message any message any message any message any message any message any message any messageUser message one here another mesage any message any mesage any message any message any message any message any message any message any message any messageUser message one here another mesage any message any mesage any message any message any message any message any message any message any message any messageUser message one here another mesage any message any mesage any message any message any message any message any message any message any message any messageUser message one here another mesage any message any mesage any message any message any message any message any message any message any message any messageUser message one here another mesage any message any mesage any message any message any message any message any message any message any message any messageUser message one here another mesage any message any mesage any message any message any message any message any message any message any message any message'
-            avatarUrl='https://www.pinterest.com/yumiisaiko/'
-          />
-          <IAMessage content='IA message example' />
-          <UserMessage
-            content='User message one here another mesage any message any mesage any message any message any message any message any message any message any message any message User message one here another mesage any message any mesage any message any message any message any message any message any message any message any messageUser message one here another mesage any message any mesage any message any message any message any message any message any message any message any messageUser message one here another mesage any message any mesage any message any message any message any message any message any message any message any messageUser message one here another mesage any message any mesage any message any message any message any message any message any message any message any messageUser message one here another mesage any message any mesage any message any message any message any message any message any message any message any messageUser message one here another mesage any message any mesage any message any message any message any message any message any message any message any messageUser message one here another mesage any message any mesage any message any message any message any message any message any message any message any messageUser message one here another mesage any message any mesage any message any message any message any message any message any message any message any message'
-            avatarUrl='https://www.pinterest.com/yumiisaiko/'
-          />
+            avatarUrl='https://www.pinterest.com/yumiisaiko/' 
+            content={""}          />
+          <IAMessage content={message?.at(0)} />
         </Box>
         <Stack sx={messageBox} justifyContent='center'>
           <TextField
