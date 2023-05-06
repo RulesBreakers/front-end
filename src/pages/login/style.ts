@@ -11,6 +11,7 @@ export const container: Sx = {
   justifyContent: 'center',
   alignItems: 'center',
   background: '#CCFFF420',
+  overflow: 'hidden',
 };
 
 export const login_card: Sx = {
@@ -23,10 +24,17 @@ export const login_card: Sx = {
 };
 
 export const left_card: Sx = {
-  width: '30vw',
+  width: '20vw',
+  height: 540,
   display: 'flex',
   justifyContent: 'center',
-  alignItems: 'flex-start',
+  alignItems: 'center',
+  borderRadius: '16px',
+  backdropFilter: 'blur(5px)',
+  borderLeft: `1px solid #00000020`,
+  borderTop: `1px solid #00000020`,
+  borderBottom: `1px solid #00000020`,
+  margin: 5,
 };
 
 export const login_form: Sx = {
