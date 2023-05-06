@@ -1,8 +1,8 @@
-import { Box, Card, CardContent, CardHeader, Typography } from '@mui/material';
+import { Box, Card, CardContent, Typography } from '@mui/material';
 import { landingLayoutPart } from './style';
 import dreamCatcher from '../../assets/dreamCatcher.png';
 
-export const WhatIdOnirix = () => (
+export const WhatIdOnyrix = () => (
   <Box
     sx={{
       ...landingLayoutPart,
@@ -11,8 +11,8 @@ export const WhatIdOnirix = () => (
       flexDirection: 'column',
     }}
   >
-    <Typography variant='body1' fontSize='2rem' m={10}>
-      Qu'est ce que Onirix ?
+    <Typography variant='body1' fontSize='2rem' m={10} mt='30'>
+      Qu'est ce que Onyrix ?
     </Typography>
     <Box
       sx={{
@@ -28,13 +28,12 @@ export const WhatIdOnirix = () => (
           width: '40vw',
           position: 'absolute',
           top: '50%',
-          left: '0',
+          left: '10%',
           transform: 'translateY(-40%)',
         }}
       />
-      <Box>
+      <Box sx={{ position: 'relative', right: 70 }}>
         <Card sx={{ width: 500, transform: 'translateX(-10rem)', mr: 5 }}>
-          <CardHeader title='Institut internationale des rêves.' />
           <CardContent
             sx={{
               display: 'flex',
@@ -53,12 +52,12 @@ export const WhatIdOnirix = () => (
             </Typography>
           </CardContent>
         </Card>
-        <Card sx={{ width: 400, transform: 'translateX(-10rem)', mt: 10 }}>
-          <CardHeader title='Onirix' />
+        <Card sx={{ width: 400, transform: 'translateX(-10rem)', mt: 6 }}>
           <CardContent>
-            <Typography variant='body1'>
-              Une intelligence artificiel créée par l'Institut internationale
-              des rêves. Elle analyse et décode vos rêves, et nous exp
+            <Typography variant='body1' m={2}>
+              Onyrix est une intelligence artificiel créée par l'Institut
+              internationale des rêves. Elle analyse et décode vos rêves, et
+              nous exp
             </Typography>
           </CardContent>
         </Card>

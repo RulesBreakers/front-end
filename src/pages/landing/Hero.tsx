@@ -23,12 +23,18 @@ export const Hero = () => {
   return (
     <Box sx={{ ...landingLayoutPart, justifyContent: 'flex-end' }}>
       <Box sx={heroText}>
+<<<<<<< Updated upstream
+=======
+        <Typography variant='body1' fontSize='4rem'>
+          ONIRIX
+        </Typography>
+>>>>>>> Stashed changes
         <Typography
           variant='body1'
           fontSize='7rem'
           sx={{ ...textTop, ...t('4s') }}
         >
-          ONIRIX
+          Onyrix
         </Typography>
         <Typography
           sx={{ ...textRight, ...t('4s'), mb: 5, ml: 1 }}

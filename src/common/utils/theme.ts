@@ -19,9 +19,9 @@ export const theme = createTheme({
           padding: '10px 20px',
           margin: '10px',
           fontSize: '16px',
-          borderRadius: '10px',
+          borderRadius: '16px',
           background: getColor(ownerState)[400],
-          boxShadow: `0px 0px 40px 10px ${primary[200]}10`,
+          boxShadow: `0px 0px 70px 30px ${primary[200]}40`,
           color: isPrimary(ownerState) ? '#fff' : '#00000099',
           textTransform: 'capitalize',
           outline: important('none'),
@@ -36,7 +36,7 @@ export const theme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          background: `${primary[100]}50`,
+          background: `#f9f9f9f9`,
           borderRadius: '10px',
           margin: 5,
           color: '#000000',
