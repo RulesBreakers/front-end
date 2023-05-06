@@ -30,11 +30,11 @@ export const theme = createTheme({
           background: `${primary[100]}70`,
           borderRadius: '10px',
           margin: 5,
-          color: '#000',
+          color: '#000000',
           backdropFilter: 'blur(5px)',
           border: important('none'),
           outline: important('none'),
-          boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.37 )',
+          boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.1 )',
         },
       },
     },
@@ -42,7 +42,7 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           textTransform: 'capitalize',
-          color: '#fff',
+          color: '#000',
         },
       },
     },
