@@ -1,38 +1,70 @@
 import { Box, Button, Typography } from '@mui/material';
 import { landingLayoutPart, watchIcon, heroText } from '.';
 
-import dreamCatcher from '../../assets/dreamcatcher.png';
+import brainImage from '../../assets/brain.png';
+import dreamHunter from '../../assets/dreamHunter.png';
 import { Watch } from '@mui/icons-material';
+import { useTransition } from '../../common/hooks';
+import { CSSProperties } from 'react';
+import { t } from '../../common/utils';
 
 export const Hero = () => {
+  const { brain, textTop, textRight, button } = useTransition(
+    {
+      brain: { transform: 'rotateY(20deg) rotateX(10deg)' },
+      textTop: { opacity: 0, transform: 'translateY(3rem)' },
+      textRight: { opacity: 0, transform: 'translateX(-3rem)' },
+      button: { opacity: 0, transform: 'translateX(3rem)' },
+    },
+    {},
+    []
+  );
+
   return (
-    <Box sx={landingLayoutPart}>
-      <img src={dreamCatcher} alt='dream' />
+    <Box sx={{ ...landingLayoutPart, justifyContent: 'flex-end' }}>
       <Box sx={heroText}>
-        <Typography variant='body1' fontSize='7rem'>
+        <Typography
+          variant='body1'
+          fontSize='7rem'
+          sx={{ ...textTop, ...t('4s') }}
+        >
           ONIRIX
         </Typography>
         <Typography
+          sx={{ ...textRight, ...t('4s'), mb: 5, ml: 1 }}
           variant='body1'
-          sx={{ transform: 'translate(10px)' }}
           fontSize='1rem'
           width='28rem'
         >
           Et si les rêves ne se limitaient pas à être des simples illusion de
           l’esprit ? Et si ils sont capables de prédire l'avenir ?
         </Typography>
-        <Button startIcon={<Watch sx={watchIcon} />}>Allons-y</Button>
+        <Button
+          sx={{ ...button, ...t('4s') }}
+          startIcon={<Watch sx={watchIcon} />}
+        >
+          Commencer
+        </Button>
+        <Button sx={{ ...button, ...t('4s') }} color='secondary'>
+          Apropos
+        </Button>
       </Box>
+      <img
+        src={dreamHunter}
+        alt='dream'
+        style={{
+          position: 'absolute',
+          top: '3rem',
+          left: '3rem',
+          height: '7rem',
+          animation: 'bounce 4s ease 0s 1 normal forwards',
+        }}
+      />
+      <img
+        src={brainImage}
+        alt='dream'
+        style={{ ...(brain as CSSProperties), ...t('4s') }}
+      />
     </Box>
   );
 };
-
-{
-  /* <Typography variant='body1' fontSize='1.5rem' width='25rem'>
-Et si les rêves ne se limitaient pas à être des simples illusion de
-l’esprit ?
-</Typography>
-<Typography variant='body1' fontSize='1.5rem'>
-Et s'ils étaient capables de prédire l'avenir?
-</Typography> */
-}

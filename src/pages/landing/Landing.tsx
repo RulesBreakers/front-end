@@ -15,7 +15,6 @@ export const Landing = () => {
             <WhatIdOnirix />
           </div>
         </Box>
-      </Box>
     </>
   );
 };
