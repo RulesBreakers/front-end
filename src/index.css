@@ -1,8 +1,7 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 
+:root,html,body,*{
+   font-family: 'Poppins', sans-serif;
   color-scheme: light dark;
   color: #141415;
   background-color: #ffffff;
