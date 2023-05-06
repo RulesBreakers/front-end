@@ -22,10 +22,5 @@ export type Action = {
 export type State = Store & Action;
 
 export type UseTransitionProps = {
-  before: {
-    [key: string]: Sx | CSSProperties;
-  };
-  after: {
-    [key: string]: Sx | CSSProperties;
-  };
+  [key: string]: Sx | CSSProperties;
 };
