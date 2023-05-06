@@ -1,5 +1,5 @@
-import { Box, Button, Typography } from '@mui/material';
-import { landingLayoutPart, watchIcon, heroText } from '.';
+import { Box, Button, Typography, useMediaQuery } from '@mui/material';
+import { landingLayoutPart, watchIcon, heroText, brainResponsive } from '.';
 
 import brainImage from '../../assets/brain.png';
 import dreamHunter from '../../assets/dreamHunter.png';
@@ -9,6 +9,7 @@ import { CSSProperties } from 'react';
 import { t } from '../../common/utils';
 
 export const Hero = () => {
+  const matches = useMediaQuery('(min-width:1300px)');
   const { brain, textTop, textRight, button } = useTransition(
     {
       brain: { transform: 'rotateY(20deg) rotateX(10deg)' },
@@ -22,7 +23,7 @@ export const Hero = () => {
 
   return (
     <Box sx={{ ...landingLayoutPart, justifyContent: 'flex-end' }}>
-      <Box sx={heroText}>
+      <Box sx={heroText(!matches)}>
         <Typography
           variant='body1'
           fontSize='7rem'
@@ -63,7 +64,11 @@ export const Hero = () => {
       <img
         src={brainImage}
         alt='dream'
-        style={{ ...(brain as CSSProperties), ...t('4s') }}
+        style={{
+          ...(brain as CSSProperties),
+          ...t('4s'),
+          ...brainResponsive(matches),
+        }}
       />
     </Box>
   );

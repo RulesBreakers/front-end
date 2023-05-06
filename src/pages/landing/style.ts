@@ -20,7 +20,7 @@ export const landingLayout: Sx = {
 
 export const landingLayoutPart: Sx = {
   width: '100%',
-  height: '98vh',
+  height: '100vh',
   margin: 0,
   padding: 0,
   display: 'flex',
@@ -46,11 +46,25 @@ export const watchIcon: Sx = {
   animation: 'rotation10 5s linear infinite',
 };
 
-export const heroText: Sx = {
+export const heroText = (matche: boolean): Sx => ({
   position: 'absolute',
+  paddingInline: 10,
+  paddingY: 5,
   top: '50%',
-  left: '20%',
-  transform: 'translate(-40%, -20%)',
-  background: '#ffffff50',
+  left: matche ? '50%' : '20%',
+  transform: 'translate(-50%, -20%)',
+  background: '#ffffff10',
   backdropFilter: 'blur(5px)',
-};
+  zIndex: 1000,
+});
+
+export const brainResponsive = (matche: boolean): Sx =>
+  !matche
+    ? {
+        position: 'absolute',
+        scale: '.4',
+        left: 0,
+        top: 0,
+        transform: 'translate(-50%, -50%)',
+      }
+    : null;
