@@ -49,8 +49,8 @@ export const watchIcon: Sx = {
 export const heroText: Sx = {
   position: 'absolute',
   top: '50%',
-  left: '50%',
-  transform: 'translate(-40%, -50%)',
+  left: '20%',
+  transform: 'translate(-40%, -20%)',
   background: '#ffffff50',
   backdropFilter: 'blur(5px)',
 };

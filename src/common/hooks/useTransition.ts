@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { UseTransitionProps } from '.';
+import { addTransition } from '../utils';
 
 export const useTransition = (
   before: UseTransitionProps,
   after: UseTransitionProps,
   deps: any[]
 ) => {
-  const [state, setState] = useState(before);
+  const [state, setState] = useState(addTransition(before));
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -18,5 +19,5 @@ export const useTransition = (
     };
   }, deps);
 
-  return { ...state };
+  return { ...addTransition(state) };
 };

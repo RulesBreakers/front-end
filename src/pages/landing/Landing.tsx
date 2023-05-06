@@ -8,9 +8,7 @@ export const Landing = () => {
     <Box sx={landingContainer}>
       <Box sx={landingLayout}>
         <Hero />
-        <div id='what-is-onirix'>
-          <WhatIdOnirix />
-        </div>
+        <WhatIdOnirix />
       </Box>
     </Box>
   );

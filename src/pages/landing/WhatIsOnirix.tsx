@@ -1,6 +1,6 @@
 import { Box, Card, CardContent, CardHeader, Typography } from '@mui/material';
 import { landingLayoutPart } from './style';
-import brainImage from '../../assets/brain.png';
+import dreamCatcher from '../../assets/dreamCatcher.png';
 
 export const WhatIdOnirix = () => (
   <Box
@@ -23,12 +23,12 @@ export const WhatIdOnirix = () => (
       }}
     >
       <img
-        src={brainImage}
+        src={dreamCatcher}
         style={{
           width: '40vw',
           position: 'absolute',
           top: '50%',
-          right: '10%',
+          left: '0',
           transform: 'translateY(-40%)',
         }}
       />
