@@ -36,4 +36,4 @@ jobs:
         username: rulesbreakers
         password: ${{secrets.PASSWORD}}
         local-dir:  ./build/
-        remote-dir: /public_html/
+        remote-dir: ./public_html/
