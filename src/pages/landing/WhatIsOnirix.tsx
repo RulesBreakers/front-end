@@ -19,7 +19,7 @@ export const WhatIdOnirix = () => (
         width: '100%',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
       }}
     >
       <img
@@ -42,41 +42,23 @@ export const WhatIdOnirix = () => (
               justifyContent: 'center',
             }}
           >
-            <Typography variant='h6' sx={{ width: 450, textAlign: 'justify' }}>
-              Institut spécialiser dans l'étude des rêves.
+            <Typography
+              variant='body1'
+              sx={{ width: 450, textAlign: 'justify' }}
+            >
+              Institut spécialiser dans l'étude des rêves. Nous menons des
+              recherches avancées sur les neurones du cerveau, comment elles
+              interagissent, comment elles se forment et comment elles
+              influences no rêves.
             </Typography>
           </CardContent>
         </Card>
-        <Card sx={{ width: 500, transform: 'translateX(-10rem)', mt: 5 }}>
-          <CardContent
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <Typography variant='h6' sx={{ width: 450, textAlign: 'justify' }}>
-              Nous menons des recherches avancées sur les neurones du cerveau,
-              comment elles interagissent, comment elles se forment et comment
-              elles influences no rêves.
-            </Typography>
-          </CardContent>
-        </Card>
-      </Box>
-      <Box>
-        <Card sx={{ width: 400, transform: 'translateX(-10rem)' }}>
+        <Card sx={{ width: 400, transform: 'translateX(-10rem)', mt: 10 }}>
           <CardHeader title='Onirix' />
           <CardContent>
-            <Typography variant='h6'>
+            <Typography variant='body1'>
               Une intelligence artificiel créée par l'Institut internationale
-              des rêves.
-            </Typography>
-          </CardContent>
-        </Card>
-        <Card sx={{ width: 400, transform: 'translateX(-10rem)' }}>
-          <CardContent>
-            <Typography variant='h6'>
-              Elle analyse et décode vos rêves, et nous exp
+              des rêves. Elle analyse et décode vos rêves, et nous exp
             </Typography>
           </CardContent>
         </Card>
