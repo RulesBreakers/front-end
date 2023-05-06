@@ -3,9 +3,22 @@
   line-height: 1.5;
   font-weight: 400;
 
+<<<<<<< HEAD
   color-scheme: light dark;
   color: #141415;
   background-color: #ffffff;
+=======
+  --background-alt: 30, 30, 36;
+
+  --border-radius: 12px;
+
+  /*color-scheme: light dark;*/
+  color: rgba(255, 255, 255, 0.87);
+
+  color: #213547;
+  background-color: #ffffff;
+
+>>>>>>> 53b6a96 (feat: add chat box)
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -47,24 +60,18 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
+a:hover {
+  color: #747bff;
+}
 
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-  }
+button {
+  background-color: #f9f9f9;
 }
 
 body {
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -133,3 +140,12 @@ a {
     transform: translateY(0px);
   }
 }
+=======
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+>>>>>>> 53b6a96 (feat: add chat box)
