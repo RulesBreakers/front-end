@@ -19,7 +19,7 @@ function App() {
         <RootComponents />
       </ThemeProvider>
     </>
-  );
+    );
 }
 
 export default App;
