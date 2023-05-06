@@ -46,7 +46,14 @@ export const RBTextField = ({
       })}
       value={record[name] || ''}
       InputProps={{
-        startAdornment: <IconButton onClick={onClickIcon}>{icon}</IconButton>,
+        startAdornment: (
+          <IconButton
+            color={!!errors[name] ? 'error' : 'default'}
+            onClick={onClickIcon}
+          >
+            {icon}
+          </IconButton>
+        ),
       }}
       // error section
       error={!!errors[name]}

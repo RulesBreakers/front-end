@@ -10,10 +10,30 @@ export const container: Sx = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  background: '#CCFFF499',
+  background: '#CCFFF420',
 };
 
 export const login_card: Sx = {
   width: '60vw',
   height: '90vh',
+  color: '#2E2E2E',
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+};
+
+export const left_card: Sx = {
+  width: '30vw',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'flex-start',
+};
+
+export const login_form: Sx = {
+  width: 500,
+  height: 500,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  flexDirection: 'column',
 };
