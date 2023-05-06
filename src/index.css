@@ -78,5 +78,15 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
+}
+
+@keyframes rotation10 {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

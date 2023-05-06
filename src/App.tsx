@@ -6,15 +6,17 @@ import { Login } from './pages/login';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <>
       <RootComponentsBackground />
-      <BrowserRouter>
-        <Routes>
-          <Route path='/login' element={<Login />} />
-        </Routes>
-      </BrowserRouter>
-      <RootComponents />
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/login' element={<Login />} />
+          </Routes>
+        </BrowserRouter>
+        <RootComponents />
+      </ThemeProvider>
+    </>
   );
 }
 

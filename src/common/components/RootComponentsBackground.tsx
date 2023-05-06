@@ -8,6 +8,10 @@ export const RootComponentsBackground = () => {
         size={100}
         left={700}
         top={600}
+        sx={{
+          animation: 'rotation10 5s linear 0s infinite normal forwards',
+          transform: 'translateY(-90%)',
+        }}
       />
       <Circle
         color='linear-gradient(80deg, rgba(207,254,206,1) 0%, rgba(123,255,82,1) 100%)'
@@ -48,13 +52,13 @@ export const RootComponentsBackground = () => {
       <Circle
         color='linear-gradient(80deg, rgba(206,232,254,1) 0%, rgba(147,203,255,1) 100%)'
         size={700}
-        left={1500}
+        right={0}
         top={-200}
       />
       <Circle
         color='linear-gradient(80deg, rgba(207,254,206,1) 0%, rgba(123,255,82,1) 100%)'
         size={100}
-        left={1500}
+        right={0}
         top={500}
       />
     </>

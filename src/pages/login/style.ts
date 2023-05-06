@@ -15,12 +15,16 @@ export const container: Sx = {
 };
 
 export const login_card: Sx = {
-  width: '60vw',
-  height: '90vh',
+  width: '50vw',
+  height: '70vh',
   color: '#2E2E2E',
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
+  justifyContent: 'space-around',
+  borderRadius: '16px',
+  backdropFilter: 'blur(5px)',
+  border: `1px solid #00000020`,
 };
 
 export const left_card: Sx = {
@@ -29,11 +33,6 @@ export const left_card: Sx = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  borderRadius: '16px',
-  backdropFilter: 'blur(5px)',
-  borderLeft: `1px solid #00000020`,
-  borderTop: `1px solid #00000020`,
-  borderBottom: `1px solid #00000020`,
   margin: 5,
 };
 
