@@ -3,6 +3,8 @@ body {
   background-color: #ffffff;
   scroll-behavior: smooth;
 }
+
+
 .body__wrapper {
   padding-inline: var(--main-container-space);
 }
@@ -55,9 +57,14 @@ body {
 /* navbar */
 .banner__navbar {
   height: var(--header-height);
-  background-color: transparent;
 
-  position: sticky;
+  background: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 2px 10px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px) !important;
+  border-radius: 10px;
+  z-index: 100000000;
+
+  position: fixed;
   top: 0;
 
   width: 100%;
@@ -90,7 +97,6 @@ body {
 
 .banner__navbar__nav__anchor:hover {
   color: rgb(var(--base-color));
-  background-color: rgb(var(--base-color-low));
 }
 
 .banner__navbar__nav__anchor:active {
@@ -114,18 +120,18 @@ body {
   border-radius: 1.8rem;
 }
 
-.banner__nav__search__container > .fa-caret-left {
+.banner__nav__search__container>.fa-caret-left {
   color: rgb(var(--grey-white-3));
   margin-left: 0.2rem;
 }
 
-.banner__nav__search__container > .fa-search {
+.banner__nav__search__container>.fa-search {
   padding: 0.75rem;
   border-radius: 50%;
   cursor: pointer;
 }
 
-.banner__nav__search__container > .fa-search:hover {
+.banner__nav__search__container>.fa-search:hover {
   background-color: rgb(var(--grey-white-3), 0.2);
 }
 
@@ -141,7 +147,7 @@ body {
   font-family: "Poppins Regular", "Sergoe UI", Arial, serif;
 }
 
-.banner__navbar__search__input:focus + .fa-caret-left {
+.banner__navbar__search__input:focus+.fa-caret-left {
   display: none;
 }
 
@@ -186,8 +192,6 @@ body {
   color: rgb(var(--grey-white-1));
 }
 
-.banner__content__side__action {
-}
 
 .banner__content__bg {
   backdrop-filter: grayscale(0.1);
@@ -196,8 +200,7 @@ body {
 /* ==========================
         MAIN
   ========================== */
-.main {
-}
+.main {}
 
 .layout {
   display: grid;
@@ -206,8 +209,7 @@ body {
   min-height: 15rem;
 }
 
-.layout__img {
-}
+.layout__img {}
 
 .layout__content {
   padding: 3rem 3rem;
@@ -236,6 +238,7 @@ body {
 .layout--normal {
   grid-template-columns: 2fr 3fr;
 }
+
 .layout--reversed {
   grid-template-columns: 2.5fr 2.5fr;
 }
@@ -256,7 +259,7 @@ body {
   padding: 2rem 2rem;
 }
 
-.advantage__content > button {
+.advantage__content>button {
   display: flex;
   margin-top: 2.5rem;
 }
@@ -324,7 +327,7 @@ body {
   color: rgb(var(--grey-white-1));
 }
 
-.footer__account__content__checks__element > i {
+.footer__account__content__checks__element>i {
   background-color: rgb(var(--base-color-low));
   color: rgb(var(--base-color));
   padding: 0.4rem;

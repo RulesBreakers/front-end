@@ -1,6 +1,6 @@
-import { IconButton, Stack, useMediaQuery } from '@mui/material';
-import './card-style.css';
 import { BoyTwoTone } from '@mui/icons-material';
+import { IconButton, Stack } from '@mui/material';
+import './card-style.css';
 
 export const Tarif = () => {
   // const matches = useMediaQuery('(min-width:900px)');

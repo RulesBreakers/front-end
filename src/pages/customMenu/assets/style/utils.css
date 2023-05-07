@@ -19,8 +19,8 @@
   --grey-white-3: 230, 228, 229;
 
   /* MAIN */
-  --base-color: 243, 205, 114;
-  --base-color-low: 251, 241, 218;
+  --base-color: 0, 174, 255;
+  --base-color-low: 167, 227, 255;
   --base-color-alt: 230, 144, 70;
   --base-color-darker: 240, 194, 86;
 }
