@@ -59,7 +59,7 @@ export const Hero = () => {
           href='/login'
           variant='outlined'
         >
-          Commencer
+          Découvrir IA
         </Button>
         <Button
           sx={{ ...button, ...t('4s') }}

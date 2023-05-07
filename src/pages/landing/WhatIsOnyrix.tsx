@@ -1,9 +1,13 @@
-import { Box, Card, CardContent, Typography } from '@mui/material';
+import {
+  Box,
+  Card,
+  CardContent,
+  Typography,
+} from '@mui/material';
 import { landingLayoutPart } from './style';
 import dreamCatcher from '../../assets/head.png';
 
-export const WhatIdOnyrix = () => {
-  /**const matches = useMediaQuery('(min-width:900px)'); */
+export const WhatIsOnyrix = () => {
 
   return (
     <Box
@@ -13,7 +17,7 @@ export const WhatIdOnyrix = () => {
         alignItems: 'center',
         flexDirection: 'column',
       }}
-      id='section_what_is'
+      id="section_what_is"
     >
       <Typography
         variant='body1'
