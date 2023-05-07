@@ -1,6 +1,6 @@
 import { Box, Typography, useMediaQuery } from '@mui/material';
 import {
-  LoginForm,
+  SignUpForm,
   container,
   left_card,
   loginAfter,
@@ -10,7 +10,7 @@ import {
 import { useTransition } from '../../common/hooks';
 import { Link } from 'react-router-dom';
 
-export const Login = () => {
+export const SignUp = () => {
   const { underline, text, text2 } = useTransition(loginBefore, loginAfter, []);
   const matches = useMediaQuery('(min-width:1400px)');
 
@@ -32,17 +32,16 @@ export const Login = () => {
                 }}
               ></Box>
               <Typography sx={text2} variant='h6' width={220}>
-                N'hésitez pas à
-                <Link to='/signup' style={{ color: 'blue', fontSize: '20px' }}>
+                Déjà membre ?
+                <Link to='/login' style={{ color: 'blue', fontSize: '20px' }}>
                   {' '}
-                  créer un compte{' '}
+                  accéder à mon compte{' '}
                 </Link>
-                et à utiliser nos services gratuits
               </Typography>
             </Box>
           </Box>
         )}
-        <LoginForm />
+        <SignUpForm />
       </Box>
     </Box>
   );

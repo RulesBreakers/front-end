@@ -4,7 +4,7 @@ import { FormProvider, useForm } from 'react-hook-form';
 import { AccountCircleOutlined, LockOpen, Person } from '@mui/icons-material';
 import { login_form } from '.';
 
-export const LoginForm = () => {
+export const SignUpForm = () => {
   const form = useForm({
     defaultValues: { username: '', password: '' },
     mode: 'all',
@@ -19,6 +19,9 @@ export const LoginForm = () => {
       <Avatar sx={{ width: '5rem', height: '5rem', mb: 5 }}>
         <Person sx={{ fontSize: 38 }} />
       </Avatar>
+      <Typography color='black' variant='h6' mb={5}>
+        Créer votre compte
+      </Typography>
       <FormProvider {...form}>
         <form
           style={{ display: 'flex', flexDirection: 'column' }}
@@ -30,7 +33,7 @@ export const LoginForm = () => {
             name='username'
           />
           <RBPasswordField label='Password' name='password' />
-          <Button type='submit'>Se connecter</Button>
+          <Button type='submit'>Créer mon compte</Button>
         </form>
       </FormProvider>
     </Box>

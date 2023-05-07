@@ -2,8 +2,6 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-
   --border-radius: 12px;
 
   /*color-scheme: light dark;*/
@@ -15,6 +13,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+::-webkit-scrollbar,
+* {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -66,7 +68,6 @@ body {
   width: 100vw;
   overflow: hidden;
 }
-
 
 @keyframes rotation10 {
   0% {
