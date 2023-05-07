@@ -1,18 +1,37 @@
-import { Avatar, Button, Box, Typography } from '@mui/material';
+import { Avatar, Button, Box, CircularProgress } from '@mui/material';
 import { RBPasswordField, RBTextField } from '../../common/components/fields';
 import { FormProvider, useForm } from 'react-hook-form';
-import { AccountCircleOutlined, LockOpen, Person } from '@mui/icons-material';
+import { AccountCircleOutlined, Person } from '@mui/icons-material';
 import { login_form } from '.';
+import { userProvider } from '../../providers';
+import { TMessageType, useNotify } from '../../common/hooks';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 export const LoginForm = () => {
   const form = useForm({
     defaultValues: { username: '', password: '' },
     mode: 'all',
   });
+  const { open } = useNotify();
+  const navigate = useNavigate();
+  const [isLoading, setLoading] = useState(false);
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-  };
+  const handleSubmit = form.handleSubmit(async data => {
+    setLoading(true);
+    try {
+      await userProvider.login(data);
+      navigate('/dashboard');
+    } catch {
+      open({
+        message: 'Veuillez vérifier vos identifiants',
+        type: TMessageType.error,
+        timeout: 3000,
+      });
+    } finally {
+      setLoading(false);
+    }
+  });
 
   return (
     <Box sx={login_form}>
@@ -30,7 +49,13 @@ export const LoginForm = () => {
             name='username'
           />
           <RBPasswordField label='Password' name='password' />
-          <Button type='submit'>Se connecter</Button>
+          <Button
+            disabled={isLoading}
+            startIcon={isLoading && <CircularProgress size={25} />}
+            type='submit'
+          >
+            Se connecter
+          </Button>
         </form>
       </FormProvider>
     </Box>
