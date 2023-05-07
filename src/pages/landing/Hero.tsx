@@ -1,13 +1,11 @@
 import { Box, Button, Typography, useMediaQuery } from '@mui/material';
 import { landingLayoutPart, watchIcon, heroText, brainResponsive } from '.';
-import { Link } from 'react-router-dom';
 import brainImage from '../../assets/brain.png';
 import dreamHunter from '../../assets/dreamHunter.png';
 import { Watch } from '@mui/icons-material';
 import { useTransition } from '../../common/hooks';
 import { CSSProperties } from 'react';
 import { t } from '../../common/utils';
-import { BACK_URL } from '../../providers/base';
 
 export const Hero = () => {
   const matches = useMediaQuery('(min-width:1300px)');
@@ -21,6 +19,21 @@ export const Hero = () => {
     {},
     []
   );
+
+  const imgStyle: any = {
+    transition: 'transform 2s, scale 100ms',
+    ...(brain as CSSProperties),
+    ...brainResponsive(matches),
+  };
+
+  const imgStyle2: any = {
+    position: 'absolute',
+    top: '3rem',
+    left: '3rem',
+    height: '7rem',
+    animation: 'bounce 4s ease 0s 1 normal forwards',
+  };
+
   return (
     <Box sx={{ ...landingLayoutPart, justifyContent: 'flex-end' }}>
       <Box sx={heroText(!matches)}>
@@ -56,26 +69,8 @@ export const Hero = () => {
           Apropos
         </Button>
       </Box>
-      <img
-        src={dreamHunter}
-        alt='dream'
-        style={{
-          position: 'absolute',
-          top: '3rem',
-          left: '3rem',
-          height: '7rem',
-          animation: 'bounce 4s ease 0s 1 normal forwards',
-        }}
-      />
-      <img
-        src={brainImage}
-        alt='dream'
-        style={{
-          transition: 'transform 2s, scale 100ms',
-          ...(brain as CSSProperties),
-          ...brainResponsive(matches),
-        }}
-      />
+      <img src={dreamHunter} alt='dream' style={imgStyle2} />
+      <img src={brainImage} alt='dream' style={imgStyle} />
     </Box>
   );
 };
