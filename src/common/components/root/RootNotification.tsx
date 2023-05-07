@@ -1,6 +1,7 @@
 import { Alert } from '@mui/material';
-import { useStore } from '../../hooks';
+import { TMessageType, useStore } from '../../hooks';
 import { DisplayNone } from '..';
+import { Close } from '@mui/icons-material';
 
 const ALERT = {
   position: 'absolute',
@@ -19,7 +20,11 @@ export const RootNotification = () => {
   const { message, type } = notification;
 
   return (
-    <Alert color={type} sx={ALERT}>
+    <Alert
+      color={type}
+      sx={ALERT}
+      icon={type === TMessageType.error && <Close />}
+    >
       {message}
     </Alert>
   );

@@ -1,6 +1,6 @@
 export type UserProvider = {
   onboarding: (user: CreateUser) => void;
-  login: (credentials: Credentials) => Promise<User>;
+  login: (credentials: Credentials) => Promise<void>;
   logout: () => void;
   getAllDreams: () => Promise<Dreams[]>;
 };
