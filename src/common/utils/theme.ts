@@ -21,7 +21,7 @@ export const theme = createTheme({
           fontSize: '16px',
           borderRadius: '16px',
           background: getColor(ownerState)[400],
-          boxShadow: `0px 0px 70px 30px ${primary[200]}40`,
+          boxShadow: `0px 0px 30px 5px ${primary[200]}40`,
           color: isPrimary(ownerState) ? '#fff' : '#00000099',
           textTransform: 'capitalize',
           outline: important('none'),

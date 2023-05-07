@@ -28,10 +28,10 @@ export const Hero = () => {
 
   const imgStyle2: any = {
     position: 'absolute',
-    top: '3rem',
+    top: '7rem',
     left: '3rem',
     height: '7rem',
-    animation: 'bounce 4s ease 0s 1 normal forwards',
+    animation: 'bounce 1s ease 0s 1 normal forwards',
   };
 
   return (
@@ -54,7 +54,7 @@ export const Hero = () => {
           l’esprit ? Et si ils sont capables de prédire l'avenir ?
         </Typography>
         <Button
-          sx={{ ...button, ...t('4s') }}
+          sx={{ ...button, ...t('2s') }}
           startIcon={<Watch sx={watchIcon} />}
           href='/login'
           variant='outlined'
@@ -62,7 +62,7 @@ export const Hero = () => {
           Découvrir IA
         </Button>
         <Button
-          sx={{ ...button, ...t('4s') }}
+          sx={{ ...button, ...t('2s') }}
           color='secondary'
           href='#section_what_is'
         >

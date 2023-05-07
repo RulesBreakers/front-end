@@ -8,6 +8,7 @@ export const landingContainer: Sx = {
   top: 0,
   left: 0,
   overflowY: 'scroll',
+  overflowX: 'hidden',
 };
 
 export const landingLayout: Sx = {

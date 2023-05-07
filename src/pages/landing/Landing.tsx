@@ -14,8 +14,8 @@ export const Landing = () => {
         <Hero />
         <WhatIdOnyrix />
         <Tarif />
-        <Footer />
       </Box>
+      <Footer />
     </Box>
   );
 };
