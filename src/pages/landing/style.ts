@@ -13,7 +13,7 @@ export const landingContainer: Sx = {
 
 export const landingLayout: Sx = {
   width: '100%',
-  minHeight: '400vh',
+  minHeight: '34s0vh',
   padding: 0,
   margin: 0,
   position: 'relative',
