@@ -54,6 +54,5 @@ export const avatar: SxProps = {};
 export const messageItem: SxProps = {
   bgcolor: '#221E22',
   color: 'grey',
-  p: 1.5,
-  borderRadius: 'var(--border-radius)',
+  borderRadius: '16px',
 };
