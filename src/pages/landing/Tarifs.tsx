@@ -15,6 +15,7 @@ import { landingLayoutPart } from '.';
 import { Sx } from '../../common/types';
 import { Star } from '@mui/icons-material';
 import { TMessageType, useNotify } from '../../common/hooks';
+import { yellow } from '@mui/material/colors';
 
 const tiers = [
   {
@@ -31,7 +32,7 @@ const tiers = [
   },
   {
     title: 'Pro',
-    subheader: 'Puissance interprétateur de rêve',
+    subheader: 'Puissant interprétateur de rêve',
     price: '45',
     description: [
       '100 requêtes faisable en un jour',
@@ -75,7 +76,10 @@ function PricingContent() {
   };
 
   return (
-    <Box sx={{ ...landingLayoutPart, flexDirection: 'column', marginTop: 20 }}>
+    <Box
+      sx={{ ...landingLayoutPart, flexDirection: 'column', marginTop: 20 }}
+      id='section_tarif'
+    >
       <GlobalStyles
         styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }}
       />
@@ -111,15 +115,17 @@ function PricingContent() {
               sm={tier.title === 'Enterprise' ? 12 : 6}
               md={4}
             >
-              <Card>
+              <Card sx={{ height: '400px', cursor: 'pointer' }}>
                 <CardHeader
                   title={tier.title}
-                  subheader={tier.subheader}
+                  subheader={
+                    <Typography fontSize='12px'>{tier.subheader}</Typography>
+                  }
                   titleTypographyProps={{ align: 'center' }}
                   action={
                     tier.title === 'Pro' ? (
-                      <IconButton color='secondary'>
-                        <Star />
+                      <IconButton>
+                        <Star sx={{ color: yellow[600] }} />
                       </IconButton>
                     ) : null
                   }
@@ -131,9 +137,10 @@ function PricingContent() {
                       theme.palette.mode === 'light'
                         ? theme.palette.grey[200]
                         : theme.palette.grey[700],
+                    height: '80px',
                   }}
                 />
-                <CardContent>
+                <CardContent sx={{ height: '200px' }}>
                   <Box
                     sx={{
                       display: 'flex',

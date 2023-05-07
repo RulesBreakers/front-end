@@ -12,14 +12,11 @@ export const CustomMenu = () => {
         </div>
 
         <div className='banner__navbar__nav f-flex--center'>
-          <a href='#home' className='banner__navbar__nav__anchor'>
-            Acceuil
+          <a href='#section_what_is' className='banner__navbar__nav__anchor'>
+            Apropos
           </a>
-          <a href='#service' className='banner__navbar__nav__anchor'>
-            Services
-          </a>
-          <a href='#feature' className='banner__navbar__nav__anchor'>
-            Ressources
+          <a href='#section_tarif' className='banner__navbar__nav__anchor'>
+            Tarifs
           </a>
           <a href='#footer' className='banner__navbar__nav__anchor'>
             FAQ
