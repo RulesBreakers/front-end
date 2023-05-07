@@ -1,12 +1,13 @@
 import { Box, Button, Typography, useMediaQuery } from '@mui/material';
 import { landingLayoutPart, watchIcon, heroText, brainResponsive } from '.';
-
+import { Link } from 'react-router-dom';
 import brainImage from '../../assets/brain.png';
 import dreamHunter from '../../assets/dreamHunter.png';
 import { Watch } from '@mui/icons-material';
 import { useTransition } from '../../common/hooks';
 import { CSSProperties } from 'react';
 import { t } from '../../common/utils';
+import { BACK_URL } from '../../providers/base';
 
 export const Hero = () => {
   const matches = useMediaQuery('(min-width:1300px)');
@@ -20,7 +21,6 @@ export const Hero = () => {
     {},
     []
   );
-
   return (
     <Box sx={{ ...landingLayoutPart, justifyContent: 'flex-end' }}>
       <Box sx={heroText(!matches)}>
@@ -43,10 +43,16 @@ export const Hero = () => {
         <Button
           sx={{ ...button, ...t('4s') }}
           startIcon={<Watch sx={watchIcon} />}
+          href='/login'
+          variant='outlined'
         >
           Commencer
         </Button>
-        <Button sx={{ ...button, ...t('4s') }} color='secondary'>
+        <Button
+          sx={{ ...button, ...t('4s') }}
+          color='secondary'
+          href='#section_what_is'
+        >
           Apropos
         </Button>
       </Box>

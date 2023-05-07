@@ -1,3 +1,3 @@
 export interface IDiscussion {
-    message: string
+  message: string;
 }

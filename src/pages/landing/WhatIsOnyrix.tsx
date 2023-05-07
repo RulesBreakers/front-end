@@ -9,7 +9,7 @@ import { landingLayoutPart } from './style';
 import dreamCatcher from '../../assets/head.png';
 
 export const WhatIdOnyrix = () => {
-  const matches = useMediaQuery('(min-width:900px)');
+  /**const matches = useMediaQuery('(min-width:900px)'); */
 
   return (
     <Box
@@ -19,6 +19,7 @@ export const WhatIdOnyrix = () => {
         alignItems: 'center',
         flexDirection: 'column',
       }}
+      id='section_what_is'
     >
       <Typography
         variant='body1'

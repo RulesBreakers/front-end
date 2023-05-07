@@ -1,11 +1,11 @@
 .chat-container {
-    width: 80vw;
-    height: 70vh;
-    border: 1px solid black;
+  width: 80vw;
+  height: 70vh;
+  border: 1px solid black;
 }
 
 .input-container {
-    width: 80vw;
-    height: 4vh;
-    border: 1px solid black;
+  width: 80vw;
+  height: 4vh;
+  border: 1px solid black;
 }
