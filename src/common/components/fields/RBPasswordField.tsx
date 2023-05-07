@@ -6,7 +6,7 @@ import { RBPasswordProps, RBTextField } from '.';
 import { useToggle } from '../../hooks';
 
 export const RBPasswordField = (props: RBPasswordProps) => {
-  const { state: passVisibility, toggle: handleToggle } = useToggle(false);
+  const { state: passVisibility, toggle: handleToggle } = useToggle(true);
 
   return (
     <RBTextField
