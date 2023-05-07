@@ -1,16 +1,20 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardHeader from '@mui/material/CardHeader';
-import CssBaseline from '@mui/material/CssBaseline';
-import Grid from '@mui/material/Grid';
-import StarIcon from '@mui/icons-material/StarBorder';
-import Typography from '@mui/material/Typography';
-import GlobalStyles from '@mui/material/GlobalStyles';
-import Container from '@mui/material/Container';
+import {
+  Box,
+  Card,
+  CardContent,
+  CardHeader,
+  Container,
+  GlobalStyles,
+  Grid,
+  Typography,
+  Button,
+  CardActions,
+  IconButton,
+} from '@mui/material';
+import { landingLayoutPart } from '.';
+import { Sx } from '../../common/types';
+import { Star } from '@mui/icons-material';
+import { TMessageType, useNotify } from '../../common/hooks';
 
 const tiers = [
   {
@@ -20,7 +24,7 @@ const tiers = [
       '10 requêtes possible par jour',
       'Pas de stockage de rêves',
       'Help center access',
-      'downtime 3h par jour'
+      'downtime 3h par jour',
     ],
     buttonText: 'Soumettre',
     buttonVariant: 'outlined',
@@ -43,45 +47,63 @@ const tiers = [
     description: [
       '50 requêtes possible par jour',
       'Historiques stockés',
-      'Help center access'
+      'Help center access',
     ],
     buttonText: 'Soumettre',
     buttonVariant: 'outlined',
   },
 ];
 
+const textContainer: Sx = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  width: '100%',
+  marginBottom: '5rem',
+};
+
 function PricingContent() {
+  const { open } = useNotify();
+
+  const aroundCorner = () => {
+    open({
+      message: 'Fonctionnalité à venir',
+      type: TMessageType.warning,
+      timeout: 3000,
+    });
+  };
+
   return (
-    <React.Fragment>
-      <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
-      <CssBaseline />
-      <Container 
-      disableGutters 
-      maxWidth="sm" 
-      component="main" 
-      id="section_tarif"
-      sx={{ pt: 8, pb: 6 }} 
-      >
+    <Box sx={{ ...landingLayoutPart, flexDirection: 'column', marginTop: 20 }}>
+      <GlobalStyles
+        styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }}
+      />
+      <Box sx={textContainer}>
         <Typography
-          component="h1"
-          variant="h2"
-          align="center"
-          color="text.primary"
+          component='div'
+          variant='h6'
+          align='center'
+          color='text.primary'
           gutterBottom
         >
           Tarifs
         </Typography>
-        <Typography variant="h5" align="center" color="text.secondary" component="p">
-          On veut tous connaître la signification de nos rêves depuis notre tendre enfance.
-          Cette fois IA ONYRIX de l'industrie des rêves à fait un grand pas dans le monde 
-          et offre ses services suivantes : 
+        <Typography
+          variant='body1'
+          align='center'
+          color='text.secondary'
+          component='p'
+          width='50rem'
+        >
+          On veut tous connaître la signification de nos rêves depuis notre
+          tendre enfance. Cette fois IA ONYRIX de l'industrie des rêves à fait
+          un grand pas dans le monde et offre ses services suivantes :
         </Typography>
-      </Container>
-      {/* End hero unit */}
-      <Container maxWidth="md" component="main">
-        <Grid container spacing={5} alignItems="flex-end">
-          {tiers.map((tier) => (
-            // Enterprise card is full width at sm breakpoint
+      </Box>
+      <Container maxWidth='md' component='main'>
+        <Grid container spacing={5} alignItems='flex-end'>
+          {tiers.map(tier => (
             <Grid
               item
               key={tier.title}
@@ -94,12 +116,18 @@ function PricingContent() {
                   title={tier.title}
                   subheader={tier.subheader}
                   titleTypographyProps={{ align: 'center' }}
-                  action={tier.title === 'Pro' ? <StarIcon /> : null}
+                  action={
+                    tier.title === 'Pro' ? (
+                      <IconButton color='secondary'>
+                        <Star />
+                      </IconButton>
+                    ) : null
+                  }
                   subheaderTypographyProps={{
                     align: 'center',
                   }}
                   sx={{
-                    backgroundColor: (theme) =>
+                    backgroundColor: theme =>
                       theme.palette.mode === 'light'
                         ? theme.palette.grey[200]
                         : theme.palette.grey[700],
@@ -114,19 +142,23 @@ function PricingContent() {
                       mb: 2,
                     }}
                   >
-                    <Typography component="h2" variant="h3" color="text.primary">
+                    <Typography
+                      component='h2'
+                      variant='h3'
+                      color='text.primary'
+                    >
                       ${tier.price}
                     </Typography>
-                    <Typography variant="h6" color="text.secondary">
-                      /mo
+                    <Typography variant='h6' color='text.secondary'>
+                      /mois
                     </Typography>
                   </Box>
                   <ul>
-                    {tier.description.map((line) => (
+                    {tier.description.map(line => (
                       <Typography
-                        component="li"
-                        variant="subtitle1"
-                        align="center"
+                        component='li'
+                        variant='body2'
+                        align='center'
                         key={line}
                       >
                         {line}
@@ -136,7 +168,9 @@ function PricingContent() {
                 </CardContent>
                 <CardActions>
                   <Button
+                    onClick={aroundCorner}
                     fullWidth
+                    sx={{ padding: 1.5 }}
                     variant={tier.buttonVariant as 'outlined' | 'contained'}
                   >
                     {tier.buttonText}
@@ -147,7 +181,7 @@ function PricingContent() {
           ))}
         </Grid>
       </Container>
-    </React.Fragment>
+    </Box>
   );
 }
 
