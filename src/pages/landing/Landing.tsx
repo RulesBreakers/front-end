@@ -3,6 +3,7 @@ import { landingContainer, landingLayout } from './style';
 
 import { Hero, Tarif, WhatIdOnyrix } from '.';
 import { CustomMenu } from '../customMenu/customMenu';
+import { Footer } from '../customMenu/footer';
 
 export const Landing = () => {
   return (
@@ -12,6 +13,7 @@ export const Landing = () => {
         <Hero />
         <WhatIdOnyrix />
         <Tarif />
+        <Footer />
       </Box>
     </Box>
   );
