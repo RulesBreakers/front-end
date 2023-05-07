@@ -8,7 +8,6 @@ import { landingLayoutPart } from './style';
 import dreamCatcher from '../../assets/head.png';
 
 export const WhatIsOnyrix = () => {
-  /**const matches = useMediaQuery('(min-width:900px)'); */
 
   return (
     <Box

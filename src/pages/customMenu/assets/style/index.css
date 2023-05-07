@@ -1,0 +1,120 @@
+@import "../fonts/poppins/style.css";
+@import "utils.css";
+
+:root {
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins Regular", "Segoe UI", arial, serif;
+  --biggest-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smallest-font-size: 0.75rem;
+  --header-height: 5rem;
+  --medium-font-size: 0.91;
+
+  /*========== Font weight ==========*/
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*========== Colors ==========*/
+  --body-color: #fffbfa;
+  --text-color: #151515;
+
+  /*========== Layout ==========*/
+  --main-container-space: 9rem;
+  --content-space: 5.75rem;
+
+  /*========== Margness ==========*/
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  /*========== z index ==========*/
+
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 3rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+  }
+}
+
+/*========== BASE ==========*/
+main {
+  margin-bottom: 15rem;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== user selection color will be changed to the base color ===== */
+::selection {
+  background-color: rgb(var(--base-color));
+  color: rgb(var(--w0));
+}
+
+::-moz-selection {
+  color: rgb(var(--w0));
+  background-color: rgb(var(--base-color));
+}
+
+/* ===== scroll ui will change if the browser supports it ===== */
+::-webkit-scrollbar {
+  background-color: rgb(var(--base-color-low));
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--base-color));
+}
