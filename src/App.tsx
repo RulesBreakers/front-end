@@ -6,6 +6,7 @@ import { Login } from './pages/login';
 import { Landing } from './pages/landing';
 import Chatterbox from './pages/chat-box/Chatterbox';
 import { SignUp } from './pages/login/SignUp';
+import Error from './pages/error_page/404';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<Landing />} />
+            <Route path='/error_page' element={<Error />} />
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<SignUp />} />
             <Route path='/dashboard' element={<Chatterbox />} />
