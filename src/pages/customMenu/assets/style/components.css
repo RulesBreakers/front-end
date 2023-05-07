@@ -1,0 +1,126 @@
+/* ========= BUTTON ========= */
+.btn {
+  /* dimension */
+  min-width: 40%;
+  height: 2.915rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+
+  /* box-model */
+  padding: 0 25px;
+  border-width: 0;
+  border-radius: 6px;
+  outline: none;
+
+  /* display */
+  line-height: 1.15;
+  color: #fff;
+  cursor: pointer;
+  text-transform: none;
+
+  background-color: rgb(var(--base-color));
+
+  /* control */
+  user-select: none;
+  -webkit-user-select: none;
+
+  /* animation */
+  transition: all 0.3s, box-shadow 0.08s ease-in;
+}
+
+.btn:hover {
+  background-color: rgb(var(--base-color-darker));
+}
+
+.btn__icons {
+  font-size: x-large;
+}
+
+/* ** BUTTON UI ** */
+.btn--bounce {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 10px 50px;
+}
+
+.btn--bounce:active {
+  translate: 0 -0.5rem;
+}
+
+.btn[small] {
+  min-width: 4rem;
+  height: 1.996rem;
+}
+
+.btn--outline {
+  border: 1px solid rgb(var(--base-color));
+  color: rgb(var(--base-color));
+  background: none;
+}
+.btn--outline:hover {
+  color: #fff;
+  background-color: rgb(var(--base-color));
+}
+
+/* ========= CHIP ========= */
+.chip {
+  border-radius: 25px;
+  margin-block: 1.5rem;
+  padding: 0.8rem;
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  font-size: var(--small-font-size);
+  color: grey;
+}
+
+.chip__icon {
+  color: rgb(var(--base-color));
+  background-color: rgb(var(--base-color-low));
+  padding: 0.9rem;
+  border-radius: inherit;
+}
+
+.chip__content {
+  padding-inline: 0.3rem;
+}
+
+.chip__content__title {
+  display: block;
+  color: black;
+}
+
+.chip[fullWidth] {
+  width: 100%;
+}
+
+/* chip mixins */
+.chip--shadow {
+  /*box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;*/
+  box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
+}
+
+.icon--violet {
+  color: #745c97;
+  background-color: #f4f2f7;
+}
+
+.icon--green {
+  color: #399e5a;
+  background-color: #e1f4e7;
+}
+
+.icon--maroon {
+  color: #856a5d;
+  background-color: #eee9e7;
+}
+
+.icon--red {
+  color: #823038;
+  background-color: #f4e1e3;
+}

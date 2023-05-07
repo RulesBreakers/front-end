@@ -1,0 +1,59 @@
+/*========== COLORS ==========*/
+:root {
+  /*==DARK==*/
+  --d0: 10, 10, 10;
+  --d1: 20, 20, 20;
+  --d2: 31, 31, 31;
+  --d3: 41, 41, 41;
+  --d4: 51, 51, 51;
+  --raisin-black: 29, 28, 33;
+
+  /*== WHITE ==*/
+  --w0: 255, 255, 255;
+  --w1: 245, 245, 245;
+  --w2: 235, 235, 235;
+
+  /*== GREY ==*/
+  --grey-white-1: 92, 92, 104;
+  --grey-white-2: 238, 236, 237;
+  --grey-white-3: 230, 228, 229;
+
+  /* MAIN */
+  --base-color: 243, 205, 114;
+  --base-color-low: 251, 241, 218;
+  --base-color-alt: 230, 144, 70;
+  --base-color-darker: 240, 194, 86;
+}
+
+.h--full {
+  height: 100%;
+}
+
+.w--full {
+  width: 100%;
+}
+
+.v-flex--center {
+  display: flex;
+  align-items: center;
+}
+
+.h-flex--center {
+  display: flex;
+  justify-content: center;
+}
+
+.f-flex--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.layout--container {
+  margin-bottom: var(--content-space);
+}
+
+.layout--reversed {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
