@@ -1,7 +1,7 @@
 import { Avatar, Button, Box, Typography } from '@mui/material';
 import { RBPasswordField, RBTextField } from '../../common/components/fields';
 import { FormProvider, useForm } from 'react-hook-form';
-import { AccountCircleOutlined, LockOpen, Person } from '@mui/icons-material';
+import { AccountCircleOutlined, Person } from '@mui/icons-material';
 import { login_form } from '.';
 
 export const SignUpForm = () => {

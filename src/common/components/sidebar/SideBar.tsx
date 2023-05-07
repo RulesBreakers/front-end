@@ -5,7 +5,6 @@ import {
   ChevronLeft,
   ChevronRight,
   HistoryOutlined,
-  Menu as MenuIcon,
   Newspaper,
 } from '@mui/icons-material';
 import { Menu } from './Menu';

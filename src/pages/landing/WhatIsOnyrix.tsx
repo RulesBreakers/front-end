@@ -1,10 +1,4 @@
-import {
-  Box,
-  Card,
-  CardContent,
-  Typography,
-  useMediaQuery,
-} from '@mui/material';
+import { Box, Card, CardContent, Typography } from '@mui/material';
 import { landingLayoutPart } from './style';
 import dreamCatcher from '../../assets/head.png';
 
