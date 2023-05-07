@@ -65,8 +65,8 @@ export const Hero = () => {
         src={brainImage}
         alt='dream'
         style={{
+          transition: 'transform 2s, scale 100ms',
           ...(brain as CSSProperties),
-          ...t('4s'),
           ...brainResponsive(matches),
         }}
       />

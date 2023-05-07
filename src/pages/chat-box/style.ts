@@ -5,9 +5,8 @@ export const container: SxProps = {
   width: '100vw',
 
   display: 'flex',
-  justifyContent: 'center',
+  justifyContent: 'space-around',
   alignItems: 'center',
-  // gridTemplateColumns: '40% auto',
 };
 
 export const drawerPaper = '& .MuiDrawer-paper';

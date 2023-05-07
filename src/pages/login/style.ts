@@ -23,7 +23,7 @@ export const login_card: Sx = {
   alignItems: 'center',
   justifyContent: 'space-around',
   borderRadius: '16px',
-  backdropFilter: 'blur(5px)',
+  sidebarFilter: 'blur(5px)',
   border: `1px solid #00000020`,
 };
 

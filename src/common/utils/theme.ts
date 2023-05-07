@@ -40,7 +40,7 @@ export const theme = createTheme({
           borderRadius: '10px',
           margin: 5,
           color: '#000000',
-          backdropFilter: 'blur(10px)',
+          sidebarFilter: 'blur(10px)',
           border: important('none'),
           outline: important('none'),
           boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.1 )',

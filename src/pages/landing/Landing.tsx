@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import { landingContainer, landingLayout } from './style';
 
-import { Hero, WhatIdOnyrix } from '.';
+import { Hero, Tarif, WhatIdOnyrix } from '.';
 
 export const Landing = () => {
   return (
@@ -9,6 +9,7 @@ export const Landing = () => {
       <Box sx={landingLayout}>
         <Hero />
         <WhatIdOnyrix />
+        <Tarif />
       </Box>
     </Box>
   );

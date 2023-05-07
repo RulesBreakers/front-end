@@ -3,9 +3,9 @@ import { create } from 'zustand';
 import { State } from './type';
 
 export const useStore = create<State>(set => ({
-  backdrop: false,
+  sidebar: false,
   notification: null,
-  setBackdrop: value => set(state => ({ ...state, backdrop: value })),
+  setSidebar: value => set(state => ({ ...state, sidebar: value })),
   setNotification: notification =>
     set(
       produce((state: State) => {

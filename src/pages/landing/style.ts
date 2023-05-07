@@ -50,21 +50,20 @@ export const heroText = (matche: boolean): Sx => ({
   position: 'absolute',
   paddingInline: 10,
   paddingY: 5,
-  top: '50%',
+  top: matche ? '30%' : '50%',
   left: matche ? '50%' : '20%',
-  transform: 'translate(-50%, -20%)',
-  background: '#ffffff10',
-  backdropFilter: 'blur(5px)',
   zIndex: 1000,
+  transform: 'translate(-50%, -20%)',
 });
 
 export const brainResponsive = (matche: boolean): Sx =>
   !matche
     ? {
         position: 'absolute',
-        scale: '.4',
-        left: 0,
-        top: 0,
-        transform: 'translate(-50%, -50%)',
+        width: 400,
+        height: 'auto',
+        right: 0,
+        top: 50,
+        transform: 'rotate(10deg)',
       }
     : null;

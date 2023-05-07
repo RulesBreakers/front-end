@@ -14,9 +14,9 @@ export type TNotification = {
   type: TMessageType;
 } | null;
 
-export type Store = { backdrop: boolean; notification: TNotification };
+export type Store = { sidebar: boolean; notification: TNotification };
 export type Action = {
-  setBackdrop: (value: boolean) => void;
+  setSidebar: (value: boolean) => void;
   setNotification: (notification: TNotification) => void;
 };
 export type State = Store & Action;
