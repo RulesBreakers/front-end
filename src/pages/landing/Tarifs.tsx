@@ -3,7 +3,7 @@ import './card-style.css';
 import { BoyTwoTone } from '@mui/icons-material';
 
 export const Tarif = () => {
-  const matches = useMediaQuery('(min-width:900px)');
+  // const matches = useMediaQuery('(min-width:900px)');
 
   return (
     <div className='layout-container'>
